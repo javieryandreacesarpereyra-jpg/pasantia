@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <body style="background-color: antiquewhite;"></body>
+    <form action="/register" method="post" enctype="multipart/form-data">
+    <h2>FORMULARIO</h2>
+
+    <fieldset>
+<legend>Datos personales</legend>
+<label for="fullname">Nombre completo:</label>
+<input type="text" id="Nombre completo" name="Nombre completo" required />
+
+<label for="fullname">Cedula:</label>
+<input type="text" id="Cedula" name="Cedula" required />
+
+<label for="fullname">Fecha de nacimiento:</label>
+<input type="text" id="Fecha de nacimiento" name="Fecha de nacimiento" required />
+
+<label for="fullname">Edad:</label>
+<input type="number" id="edad" name="edad"  min="18" max="100" />
+
+<label for="fullname">Estado civil:</label>
+<input type="text" id="Estado civil" name="Estado civil" required />
+<div>
+<label for="fullname">Genero:</label>
+<input type="text" id="Genero" name="Genero" required />
+
+<label for="fullname">Nacionalidad:</label>
+<input type="text" id="Nacionalidad" name="Nacionalidad" required />
+
+<label for="fullname">Telefono:</label>
+<input type="text" id="Telefono" name="Telefono" required />
+
+<label for="fullname">Correo electronico:</label>
+<input type="text" id="Correo electronico" name="Correo electronico" required />
+
+<label for="fullname">Direccion:</label>
+<input type="text" id="Direccion" name="Direccion" required />
+</fieldset>
+
+<fieldset>
+<legend>Datos laborales</legend>
+<label>Departamento:</label>
+<input type="text" id="Departamento" name="Departamento" required />
+
+<label>Cargo o puesto:</label>
+<input type="text" id="cargo o puesto" name="cargo o puesto" required />
+
+<label>Fecha de ingreso:</label>
+<input type="text" id="Fecha de ingreso" name="Fecha de ingreso" required />
+
+<labe>Tipo de contrato:</label>
+<input type="checkbox" id="fijo" name="tipo de contrato" value="fijo">
+<label for="fijo">Fijo</label>
+
+<input type="checkbox" id="Temporal" name="tipo de contrato" value="temporal" >
+<label for="temporal">Temporal</label>
+
+<input type="checkbox" id="Pasantia" name="tipo de contrato" value="Pasantia" >
+<label for="Pasantia">Pasantia</label>
+
+
+<label>Jornada laboral:</label>
+<input type="radio" id="tiempo completo" name="mediio tiempo" value="tiempo cmpleto">
+<label for="tiempo completo">Tiempo completo</label>
+
+<input 
+type="radio"
+id="medio tiempo"
+name="tiempo completo"
+value="mediio tiempo"
+/>
+<label for="medio tiempo">Medio tiempo</label>
+</fieldset>
+<fieldset>
+    <legend>Datos de contacto de emergencia</legend>
+<label for="fullname">Nombre del conctacto:</label>
+<input type="text" id="nombre del conctacto" name="nombre del conctacto" required />
+
+<label for="fullname">Relacion:</label>
+<input type="text" id="Relacion" name="Relacion" required />
+
+<label for="fullname">Telefono del conctacto:</label>
+<input type="text" id="telefono del contacto" name="telefono del conctato" required />
+</fieldset>
+<fieldset>
+<legend>Otros</legend>
+<label for="fullname">Nivel academico/formacion:</label>
+<input type="text" id="nivel academico/formacion" name="nivel academico/formacion" required />
+
+<label for="fullname">Habilidades/competencias:</label>
+<input type="text" id="habilidades/competencias" name="habilidades/competencias" required />
+
+<label for="fullname">Observaciones:</label>
+<input type="text" id="Observaciones" name="Observaciones" required />
+
+<button type="submit">Enviar</button>
+
+</fieldset>
+</fieldset>
+</fieldset>
+    </form>
+</body>
+</html>
