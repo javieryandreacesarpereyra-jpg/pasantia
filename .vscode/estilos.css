@@ -1,0 +1,201 @@
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e6ecff, #ffecec);
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.profile-image {
+  border-radius: 50%;
+  border: 1rem solid #fff:
+}
+
+.empresa-header {
+  text-align: center;
+  background: linear-gradient(90deg, #003366, #b30000);
+  color: white;
+  padding: 25px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 130px;
+  display: block;
+  margin: 0 auto 10px;
+}
+ 
+h1 {
+  margin: 10px 0 5px;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.empresa-header p {
+  font-size: 15px;
+  margin: 0;
+}
+
+
+.contenedor-formulario {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 2px solid #003366;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background: #f8faff;
+}
+
+legend {
+  color: #fff;
+  background: #003366;
+  padding: 6px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #002244;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+
+.telefono {
+  display: flex;
+  gap: 10px;
+}
+
+.telefono select {
+  width: 30%;
+}
+
+
+.enviar-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #003366, #b30000);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.enviar-btn:hover {
+  background: linear-gradient(90deg, #0055aa, #e60000);
+  transform: scale(1.03);
+}
+
+
+footer {
+  text-align: center;
+  background: #003366;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 4px solid #b30000;
+}
+
+button, input[type="submit"] {
+  background-color: #007bff;  /* Azul intenso */
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #09315c; 
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}button, input[type="submit"] {
+  background-color: #0d3d70;  
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+button:hover, input[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+
+}
+
+button, input[type="submit"] {
+  background-color: #093666;  
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #062f5a; 
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+
+body {
+  background-image: url(mescyt.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}

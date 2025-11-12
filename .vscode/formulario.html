@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+  <style>
+body {
+  background: linear-gradient(to bottom, 2c3e50, bdc3c7);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+</style>
+ <link rel="stylesheet" href="estilos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-</head>
-<body>
-    <body style="background-color: antiquewhite;"></body>
+    <link rel="stylesheet" href="estilos.css">
+   </head>
+   
+    <body style="background-color: white">
+      <header class="empresa-header">
+         <img src="mescyt.jpg" width="200px" height="200px">
+          <h2>FORMULARIO</h2>
+          </header>
+
     <form action="/register" method="post" enctype="multipart/form-data">
-    <h2>FORMULARIO</h2>
+    
+    </form>
+    </body>
 
     <fieldset>
 <legend>Datos personales</legend>
@@ -16,14 +36,42 @@
 <input type="text" id="Nombre completo" name="Nombre completo" required />
 
 <label for="fullname">Cedula:</label>
-<input type="text" id="Cedula" name="Cedula" required />
+<input type="text" id="cedula" maxlength="13" placeholder="000-0000000-0" oninput="formatearCedula(this)">
+<script>
+function formatearCedula(input) {
+  let valor = input.value.replace(/\D/g, '');
+  if (valor.length > 3 && valor.length <= 10)
+    valor = valor.replace(/^(\d{3})(\d+)/, '$1-$2');
+  else if (valor.length > 10)
+    valor = valor.replace(/^(\d{3})(\d{7})(\d+)/, '$1-$2-$3');
+  input.value = valor;
+}
+</script>
 
 <label for="fullname">Fecha de nacimiento:</label>
-<input type="text" id="Fecha de nacimiento" name="Fecha de nacimiento" required />
+<input type="date" id="fechaNacimiento" onchange="calcularEdad()">
+
+<script>
+function calcularEdad() {
+  const fecha = new Date(document.getElementById("fechaNacimiento").value);
+  const hoy = new Date();
+  let edad = hoy.getFullYear() - fecha.getFullYear();
+  const m = hoy.getMonth() - fecha.getMonth();
+  if (m < 0 || (m === 0 && hoy.getDate() < fecha.getDate()))
+}
+</script>                
+
 
 <label for="fullname">Edad:</label>
-<input type="number" id="edad" name="edad"  min="18" max="100" />
-
+<input 
+type="number"
+id="edad"
+name="edad"
+min="1"
+max="99"
+oninput="if(this.value > 99) this.value = 99;"
+required>
+ 
 <label for="fullname">Estado civil:</label>
 <input type="text" id="Estado civil" name="Estado civil" required />
 <div>
@@ -34,13 +82,26 @@
 <input type="text" id="Nacionalidad" name="Nacionalidad" required />
 
 <label for="fullname">Telefono:</label>
-<input type="text" id="Telefono" name="Telefono" required />
+<div class="telefono-container">
+  <select id="codigo-area">
+    <option value="+1-809">+1 (809)</option>
+    <option value="+1-829">+1 (829)</option>
+    <option value="+1-849">+1 (849)</option>
+  </select>
+  <input type="tel" id="numero" placeholder="Ingrese su número">
+</div>
 
 <label for="fullname">Correo electronico:</label>
-<input type="text" id="Correo electronico" name="Correo electronico" required />
+<input type="email" list="dominios" placeholder="Ej: nombre@gmail.com">
+<datalist id="dominios">
+  <option value="@gmail.com">
+  <option value="@hotmail.com">
+  <option value="@outlook.com">
+  <option value="@yahoo.com">
+</datalist>
 
 <label for="fullname">Direccion:</label>
-<input type="text" id="Direccion" name="Direccion" required />
+<textarea rows="2" placeholder="Escribe tu direccion completa"></textarea>
 </fieldset>
 
 <fieldset>
@@ -54,30 +115,24 @@
 <label>Fecha de ingreso:</label>
 <input type="text" id="Fecha de ingreso" name="Fecha de ingreso" required />
 
-<labe>Tipo de contrato:</label>
-<input type="checkbox" id="fijo" name="tipo de contrato" value="fijo">
+<labe>Tipo de contrato:</label><br>
+<input type="radio" id="fijo" name="contrato" value="fijo">
 <label for="fijo">Fijo</label>
 
-<input type="checkbox" id="Temporal" name="tipo de contrato" value="temporal" >
+<input type="radio" id="temporal" name="contrato" value="temporal">
 <label for="temporal">Temporal</label>
 
-<input type="checkbox" id="Pasantia" name="tipo de contrato" value="Pasantia" >
-<label for="Pasantia">Pasantia</label>
+<input type="radio" id="pasantia" name="contrato" value="Pasantia"
+<label for="pasantia">Pasantia</label>
+<br><br>
 
-
-<label>Jornada laboral:</label>
-<input type="radio" id="tiempo completo" name="mediio tiempo" value="tiempo cmpleto">
+<label>Jornada laboral:</label><br>
+<input type="radio" id="tiempo completo" name="jornada" value="completo">
 <label for="tiempo completo">Tiempo completo</label>
 
-<input 
-type="radio"
-id="medio tiempo"
-name="tiempo completo"
-value="mediio tiempo"
-/>
+<input type="radio" id="medio tiempo" name="jornada" value="medio">
 <label for="medio tiempo">Medio tiempo</label>
-</fieldset>
-<fieldset>
+
     <legend>Datos de contacto de emergencia</legend>
 <label for="fullname">Nombre del conctacto:</label>
 <input type="text" id="nombre del conctacto" name="nombre del conctacto" required />
